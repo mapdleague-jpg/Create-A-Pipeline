@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MAP Tangibles Index™</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- MAP Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --map-blue: #2E5084;
+      --bg: #f3f4f8;
+      --card-bg: #ffffff;
+      --border: #dce2ee;
+      --text-main: #1a1a1a;
+      --text-muted: #6b7280;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-main);
+      text-align: center;
+    }
+
+    /* 🔵 MAP BORDER FRAME */
+    .page-frame {
+      border: 10px solid var(--map-blue);
+      border-radius: 14px;
+      background: #ffffff;
+      padding: 2.5rem 1.5rem 3rem;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--map-blue);
+      margin-bottom: 0.65rem;
+    }
+
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.5;
+    }
+
+    .pill-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.4rem;
+    }
+
+    .pill {
+      background: #e2e8f0;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    /* TABLE CARD */
+    .table-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      text-align: center;
+    }
+
+    th, td {
+      padding: 0.65rem 0.35rem;
+      border-bottom: 1px solid #edf2f7;
+      font-size: 0.82rem;
+    }
+
+    th {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
+    .cell-name {
+      font-weight: 600;
+      color: var(--map-blue);
+    }
+
+    .pill-score {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #e8efff;
+      color: #1a2a5a;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .final-score {
+      font-weight: 700;
+      color: #2E5084;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-frame">
+
+    <h1 class="page-title">MAP Tangibles Index™</h1>
+
+    <p class="page-subtitle">
+      Quantifying the résumé-driven, academic, and performance-based signals that predict success 
+      in investment banking. Tangibles measure what shows up on paper — GPA strength, academic rigor, 
+      sport-balanced commitments, and structured interview execution.
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">📚 GPA</span>
+      <span class="pill">🎓 School / Major Strength</span>
+      <span class="pill">🏅 Outside Involvement</span>
+      <span class="pill">📝 Tangible Interview</span>
+    </div>
+
+    <!-- TABLE -->
+    <section class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>GPA</th>
+            <th>School / Major</th>
+            <th>Outside Involvement</th>
+            <th>Interview Score</th>
+            <th>TIX™</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- KILEY -->
+          <tr>
+            <td class="cell-name">Kiley Wilhelm</td>
+            <td><span class="pill-score">9.9</span></td>
+            <td><span class="pill-score">9.7</span></td>
+            <td><span class="pill-score">9.5</span></td>
+            <td><span class="pill-score">9.6</span></td>
+            <td class="final-score">96.9</td>
+          </tr>
+
+          <!-- JAMIE -->
+          <tr>
+            <td class="cell-name">Jamie Reidy</td>
+            <td><span class="pill-score">9.8</span></td>
+            <td><span class="pill-score">9.5</span></td>
+            <td><span class="pill-score">9.0</span></td>
+            <td><span class="pill-score">9.4</span></td>
+            <td class="final-score">92.9</td>
+          </tr>
+
+          <!-- NICOLE -->
+          <tr>
+            <td class="cell-name">Nicole Granovsky</td>
+            <td><span class="pill-score">9.0</span></td>
+            <td><span class="pill-score">9.2</span></td>
+            <td><span class="pill-score">9.3</span></td>
+            <td><span class="pill-score">9.3</span></td>
+            <td class="final-score">90.2</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+</body>
+</html>
