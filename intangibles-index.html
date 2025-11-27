@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- MAP Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -18,8 +18,6 @@
       --text-muted: #6b7280;
     }
 
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
       padding: 2rem;
@@ -29,7 +27,7 @@
       text-align: center;
     }
 
-    /* 🔵 MAP BORDER FRAME */
+    /* MAP BORDER FRAME */
     .page-frame {
       border: 10px solid var(--map-blue);
       border-radius: 14px;
@@ -39,28 +37,44 @@
       margin: 0 auto;
     }
 
-    .page-title {
+    .title {
       font-family: 'Archivo Black', sans-serif;
+      color: var(--map-blue);
       font-size: 1.9rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: var(--map-blue);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
     }
 
-    .page-subtitle {
-      font-size: 0.97rem;
+    .subtitle {
       color: var(--text-muted);
+      font-size: 0.95rem;
       max-width: 760px;
-      margin: 0.5rem auto 1.5rem;
+      margin: 0 auto 1.4rem;
       line-height: 1.45;
     }
 
-    /* TABLE CARD */
+    .pill-row {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 1.4rem;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      background: #e2e8f0;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    /* TABLE */
     .table-card {
       background: var(--card-bg);
-      border-radius: 12px;
       border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 1rem;
       max-width: 1000px;
       margin: 0 auto;
@@ -70,122 +84,117 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 780px;
+      min-width: 760px;
       text-align: center;
     }
 
     th, td {
-      padding: 0.6rem;
+      padding: 0.55rem;
       border-bottom: 1px solid #edf2f7;
-      font-size: 0.83rem;
+      font-size: 0.82rem;
     }
 
     th {
       text-transform: uppercase;
-      font-size: 0.74rem;
       color: var(--text-muted);
+      font-size: 0.75rem;
       letter-spacing: 0.06em;
     }
 
-    .cell-name {
+    .name {
       color: var(--map-blue);
       font-weight: 600;
     }
 
     .badge {
-      padding: 0.25rem 0.55rem;
-      border-radius: 999px;
-      font-size: 0.72rem;
       display: inline-block;
-    }
-
-    .badge-personality {
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
       background: #f3e8ff;
       color: #4b106e;
     }
 
-    .badge-leadership {
-      background: #e0f2fe;
-      color: #075985;
+    .score {
+      font-weight: 600;
+      color: #111827;
     }
-
-    .badge-stars {
-      background: #fff7ed;
-      font-size: 0.9rem;
-    }
-
   </style>
 </head>
 
 <body>
+
   <div class="page-frame">
 
-    <h1 class="page-title">Intangibles Index™</h1>
+    <h1 class="title">MAP Intangibles Index™</h1>
 
-    <p class="page-subtitle">
-      MAP’s Intangibles Index™ quantifies the interpersonal, leadership, and competitive traits 
-      firms value most in early-career recruiting. Built on four pillars—Athletic Accomplishment, 
-      Personality Fit, Leadership Style Match, and Interview Performance—this index reveals each 
-      prospect’s readiness for high-pressure, client-facing environments.
+    <p class="subtitle">
+      The Intangibles Index™ (IIX™) evaluates the four traits Guggenheim’s A&D team screens for most: 
+      athletic pressure-performance, personality fit, leadership style, and interview composure.
     </p>
 
-    <!-- TABLE -->
+    <div class="pill-row">
+      <span class="pill">🧠 Personality</span>
+      <span class="pill">🎤 Interview</span>
+      <span class="pill">🏅 Athletics</span>
+      <span class="pill">📈 Leadership</span>
+    </div>
+
     <section class="table-card">
       <table>
         <thead>
           <tr>
-            <th>Player</th>
+            <th>Athlete</th>
             <th>School</th>
             <th>Sport</th>
-            <th>Athletics<br>(/10)</th>
-            <th>Personality<br>(/10)</th>
-            <th>Leadership<br>(/10)</th>
-            <th>Interview<br>(/85)</th>
+            <th>Athletics</th>
+            <th>Personality</th>
+            <th>Leadership</th>
+            <th>Interview</th>
             <th>IIX™</th>
           </tr>
         </thead>
 
         <tbody>
-          <!-- KILEY -->
           <tr>
-            <td class="cell-name">Kiley Wilhelm</td>
+            <td class="name">Kiley Wilhelm</td>
             <td>Harvard</td>
             <td>Swimming</td>
-            <td>8.8</td>
-            <td><span class="badge badge-personality">Podium Sweep (8.5)</span></td>
-            <td><span class="badge badge-leadership">Bureaucratic (7.5)</span></td>
-            <td>77</td>
-            <td><strong>41.9</strong></td>
+            <td>9.2</td>
+            <td>9.5 <span class="badge">Podium Sweep</span></td>
+            <td>8.5 <span class="badge">Bureaucratic</span></td>
+            <td>9.06</td>
+            <td class="score">90.7</td>
           </tr>
 
-          <!-- JAMIE -->
           <tr>
-            <td class="cell-name">Jamie Reidy</td>
+            <td class="name">Jamie Reidy</td>
             <td>Harvard</td>
             <td>Rowing</td>
-            <td>8.5</td>
-            <td><span class="badge badge-personality">Podium Sweep (8.5)</span></td>
-            <td><span class="badge badge-leadership">Transactional (7.0)</span></td>
-            <td>81.5</td>
-            <td><strong>42.7</strong></td>
+            <td>9.0</td>
+            <td>9.5 <span class="badge">Podium Sweep</span></td>
+            <td>8.0 <span class="badge">Transactional</span></td>
+            <td>9.59</td>
+            <td class="score">90.2</td>
           </tr>
 
-          <!-- NICOLE -->
           <tr>
-            <td class="cell-name">Nicole Granovsky</td>
+            <td class="name">Nicole Granovsky</td>
             <td>Michigan</td>
             <td>Rowing</td>
             <td>8.0</td>
-            <td><span class="badge badge-personality">Hustler (9.0)</span></td>
-            <td><span class="badge badge-leadership">Servant Leader (8.0)</span></td>
-            <td>83</td>
-            <td><strong>44.0</strong></td>
+            <td>8.0 <span class="badge">Hustler</span></td>
+            <td>9.0 <span class="badge">Servant Leader</span></td>
+            <td>9.76</td>
+            <td class="score">86.9</td>
           </tr>
-
         </tbody>
       </table>
     </section>
 
   </div>
+
 </body>
 </html>
+
